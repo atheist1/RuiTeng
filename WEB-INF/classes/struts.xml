@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<bean type="org.apache.struts2.dispatcher.multipart.MultiPartRequest"
+		name="myRequestParser" class="cn.com.ruiteng.common.RequestParseWrapper"
+		scope="default" optional="true" />
+	<constant name="struts.multipart.handler" value="myRequestParser" />
+	
+
+	<package name="ruiteng" extends="struts-default" namespace="/">
+		<action name="loginAction" class="cn.com.ruiteng.action.LoginAction">
+			<result name="success">admin/index.html</result>
+			<result name="failed">admin/index.jsp</result>
+		</action>
+	</package>
+	
+	<package name="ruiteng2" extends="struts-default" namespace="/admin">
+		<!-- 修改密码 -->
+		<action name="validatepwd" class="cn.com.ruiteng.action.UserAction"
+			method="confPwd">
+		</action>
+
+		<action name="updatePwd" class="cn.com.ruiteng.action.UserAction"
+			method="updatePwd">
+			<result name="success">revise_password.jsp</result>
+			<result name="failed">revise_password.jsp</result>
+		</action>
+
+		<!-- 添加管理员 -->
+		<action name="addUser" class="cn.com.ruiteng.action.UserAction"
+			method="addUser">
+			<result name="success">add_user.jsp</result>
+			<result name="failed">add_user.jsp</result>
+		</action>
+
+		<!-- 验证管理员是否已存在 -->
+		<action name="confuser" class="cn.com.ruiteng.action.UserAction"
+			method="confUser">
+		</action>
+
+		<!-- 根据username查找管理员 -->
+		<action name="finduser" class="cn.com.ruiteng.action.UserAction"
+			method="findUser">
+		</action>
+
+		<!-- 根据类别查找管理员 并分页显示 -->
+		<action name="findUserByType" class="cn.com.ruiteng.action.UserAction"
+			method="findUserByType">
+			<result name="success">user_list.jsp</result>
+			<result name="failed">user_list.jsp</result>
+		</action>
+
+		<!-- 显示单个管理员信息 -->
+		<action name="show_user" class="cn.com.ruiteng.action.UserAction"
+			method="showUser">
+			<result name="success">edit_user.jsp</result>
+			<result name="failed">user_list.jsp</result>
+		</action>
+
+		<!-- 编辑管理员 -->
+		<action name="edit_user" class="cn.com.ruiteng.action.UserAction"
+			method="editUser">
+			<result name="success">user_list.jsp</result>
+			<result name="failed">user_list.jsp</result>
+		</action>
+
+		<!-- 删除管理员 -->
+		<action name="delete_user" class="cn.com.ruiteng.action.UserAction"
+			method="deleteUser">
+			<result name="success">user_list.jsp</result>
+			<result name="failed">user_list.jsp</result>
+		</action>
+
+		<!-- 批量删除管理员 -->
+		<action name="batchdelete_user" class="cn.com.ruiteng.action.UserAction"
+			method="batchDelete">
+			<result name="success">user_list.jsp</result>
+			<result name="failed">user_list.jsp</result>
+		</action>
+
+		<!-- 轮播图片操作 -->
+		<!-- 查看图片 -->
+		<action name="show_ppt" class="cn.com.ruiteng.action.PPTAction"
+			method="showPPT">
+			<result name="success">advertising_list.jsp</result>
+			<result name="failed">advertising_list.jsp</result>
+		</action>
+
+		<!-- 添加图片 -->
+		<action name="add_ppt" class="cn.com.ruiteng.action.PPTAction"
+			method="addPPT">
+			<result name="success" type="chain">show_ppt</result>
+			<result name="failed" type="chain">show_ppt</result>
+		</action>
+		<!-- 删除图片 -->
+		<action name="delete_ppt" class="cn.com.ruiteng.action.PPTAction"
+			method="deletePPT">
+		</action>
+
+		<!-- 批量删除图片 -->
+		<action name="batchdelete_ppt" class="cn.com.ruiteng.action.PPTAction"
+			method="batchdeletePPT">
+			<result name="success" type="chain">show_ppt</result>
+			<result name="failed" type="chain">show_ppt</result>
+		</action>
+
+		<!-- 官网显示轮播图 -->
+		<action name="index_show_ppt" class="cn.com.ruiteng.action.PPTAction"
+			method="indexshowPPT">
+			<result name="failed">admin/index.html</result>
+		</action>
+
+		<!-- 添加新闻 -->
+		<action name="add_news" class="cn.com.ruiteng.action.NewsAction"
+			method="addNews">
+			<result name="success" type="chain">show_news</result>
+			<result name="failed" type="chain">show_news</result>
+		</action>
+		
+		<!-- 删除新闻 -->
+		<action name="delete_news" class="cn.com.ruiteng.action.NewsAction"
+			method="deleteNews">
+		</action>
+		<!-- 批量删除新闻 -->
+		<action name="batch_delete_news" class="cn.com.ruiteng.action.NewsAction"
+			method="batchDeleteNews">
+		</action>
+		<!-- 查找新闻 -->
+		<action name="show_news" class="cn.com.ruiteng.action.NewsAction"
+			method="showNews">
+			<result name="success">news_list.jsp</result>
+			<result name="failed">news_list.jsp</result>
+		</action>
+
+		<!-- 查找新闻 并分页显示 -->
+		<action name="distribute_show_news" class="cn.com.ruiteng.action.NewsAction"
+			method="distributeShowNews">
+			<result name="success">news_list.jsp</result>
+			<result name="failed">news_list.jsp</result>
+		</action>
+
+		<!-- 查找单个新闻 详细信息 -->
+		<action name="look_news" class="cn.com.ruiteng.action.NewsAction"
+			method="lookNews">
+			<result name="success">../html/newsDesc.jsp</result>
+			<result name="failed">main.jsp</result>
+		</action>
+
+		<!-- 官网显示新闻 -->
+		<action name="index_show_news" class="cn.com.ruiteng.action.NewsAction"
+			method="indexShowNews">
+			<result name="success">../html/news.jsp</result>
+			<result name="failed">../html/news.jsp</result>
+		</action>
+		   
+		<!-- 获取相册albumid -->
+		<action name="getAlbumid" class="cn.com.ruiteng.action.NewsPictureAction"
+			method="getAlbumid">
+			
+		</action>
+		
+		<!-- 添加新闻图片 -->
+		<action name="uploadImg" class="cn.com.ruiteng.action.NewsPictureAction"
+			method="uploadPicture">
+			
+		</action>
+		
+		
+		
+		
+		
+		<!-- 通配符配置  * -> 要位置配置的 {1}{2} 表示第幾個*  {0}表示通配符整個字符串 -->
+		<action name="AlbumType_*" class="cn.com.ruiteng.action.AlbumTypeAction" method="{1}">
+			<result name="ERROR">add_albumtype.jsp</result>
+			<result name="SUCCESS">add_albumtype.jsp</result>
+			<result name="PAGE">albumtype.jsp</result>
+			<result name="ADD_ALBUM">add_album.jsp</result>
+			<result name="SELECT">edit_albumtype.jsp</result>
+			<result name="MODIFY">albumtype.jsp</result>
+		</action>
+		
+		<action name="Album_*" class="cn.com.ruiteng.action.AlbumAction" method="{1}">
+			<result name="ERROR">add_album.jsp</result>
+			<result name="SUCCESS">add_album.jsp</result>
+			<result name="PAGE">album.jsp</result>
+			<result name="SELECT">edit_album.jsp</result>
+			<result name="MODIFY">album.jsp</result>
+			
+		</action>
+		
+		<action name="Picture_*" class="cn.com.ruiteng.action.PictureAction" method="{1}">
+			<result name="ADD_PICTURE">add_picture.jsp</result>
+			<result name="ERROR">add_picture.jsp</result>
+			<result name="SUCCESS">add_picture.jsp</result>
+			<result name="ALL_PICTURE" type="redirect">Picture_showPicture.action?jumpPage=1</result>
+			<result name="PAGE">picture.jsp</result>
+			<result name="PAGE_ALBUM">picture_album.jsp</result>
+			<result name="SELECT">edit_picture.jsp</result>
+			<result name="MODIFY">picture.jsp</result>
+		</action>
+	</package>
+
+
+	<package name="html" extends="struts-default" namespace="/html">
+		<!-- 官网显示新闻 -->
+		<action name="index_show_news" class="cn.com.ruiteng.action.NewsAction"
+			method="indexShowNews">
+			<result name="success">../html/news.jsp</result>
+			<result name="failed">../html/news.jsp</result>
+		</action>
+
+		<!-- 官网分页显示更多信息 -->
+		<action name="index_distribute_show_news" class="cn.com.ruiteng.action.NewsAction"
+			method="distributeShowNews">
+			<result name="success">more_news.jsp</result>
+			<result name="failed">more_news.jsp</result>
+		</action>
+
+		<!-- 查找新闻 -->
+		<action name="show_news" class="cn.com.ruiteng.action.NewsAction"
+			method="showNews">
+			<result name="success">newsDesc.jsp</result>
+			<result name="failed">index.jsp</result>
+		</action>
+		
+		
+		
+		<action name="Album_*" class="cn.com.ruiteng.action.AlbumAction" method="{1}">
+			<result name="SHOW_ALL">photograph.jsp</result>
+		</action>
+		
+		<action name="Picture_*" class="cn.com.ruiteng.action.PictureAction" method="{1}">
+			<result name="SHOW_PICTURE">1.jsp</result>
+			<result name="SHOW_FRIST">farmsScenery.jsp</result>
+		</action>
+	</package>
+
+
+</struts>    

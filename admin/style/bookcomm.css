@@ -1,0 +1,54 @@
+	       .control-panel a {
+	       	text-decoration: none;
+	       	color: #6F7579;
+	       }
+	       
+	       .control-panel li {
+	       	position: relative;
+	       	list-style: none;
+	       	display: inline;
+	       	float: left;
+	       	left: 258px;
+	       }
+	       
+	       .control-panel button {
+	       	position: relative;
+	       	width: 52px;
+	       }
+	       
+	       .content {
+	       	position: relative;
+	       	top: 5px;
+	       }
+	       
+	       .book-comm-left {
+	       	position: relative;
+	       	float: left;
+	       	display: inline;
+	       	width: 590px;
+	       }
+	       
+	       .comm-right {
+	       	position: absolute;
+	       	margin-left: 660px;
+	       	margin-top: 0px;
+	       	padding-top: 0px;
+	       }
+	       
+	       .chooseimage {
+	       	width: 90px;
+	       	border: 2 px dashed;
+	       	height: 100px;
+	       	text-align: center;
+	       	vertical-align: middle;
+	       }
+	       
+	       .img-list {
+	       	position: relative;
+	       	top: 10px;
+	       }
+	       
+	       textarea {
+	       	font-size: 18px;
+	       	width: 585px;
+	       }

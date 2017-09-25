@@ -1,0 +1,274 @@
+/*
+* @Author: Marte
+* @Date:   2017-08-16 21:32:33
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-09-14 11:33:30
+*/
+
+/* 分页公共部分 */
+#content #posNav{
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    color: #999;
+}
+#content #posNav .row1{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#content #posNav .row1 .row{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+#content #posNav .row1 .row ul li{
+    float: left;
+    list-style:none;
+    margin-right:10px;
+}
+#content #posNav .row1 .row ul li a{
+    text-decoration:none;
+    color:#999;
+}
+#content #about {
+    margin-bottom:50px;
+}
+#content #about .aboutLeft{
+    font-size: 16px;
+    color: #666;
+    background: #fafafa;
+    /* margin-left: 15px; */
+
+}
+#content #about .aboutLeft #title{
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+    margin-top: 1.1em;
+    /* margin-bottom: 10px; */
+    padding-bottom: 1em;
+    /* border-bottom: 1px solid #e6e6e6; */
+    font-weight: bold;
+    padding-left: 20px;
+}
+#content #about .aboutLeft a{
+    color: #666;
+    font-weight:400;
+}
+#content #about .aboutLeft dt{
+    padding: 10px 0px;
+    /* padding: 15 0px; */
+    padding-left: 20px;
+    /* border-bottom: 1px solid #eaeaea; */
+    border-top: 1px solid #eaeaea;
+}
+#content #about .aboutLeft a.on{
+    color:#588c0e;
+}
+#content #about .aboutLeft dd{
+    padding: 5px 0px;
+    padding-left: 35px;
+    /* border-bottom: 1px solid #eaeaea; */
+    font-size: 14px;
+}
+
+
+/*aboutRight */
+#content #about .aboutRight h1{
+    margin-left:50px;
+    font-size: 24px;
+    /* font-size: 16px; */
+    font-weight: normal;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e6e6e6;
+}
+#content #about .aboutRight .content1 img{
+    border: 0px solid;
+    vertical-align: middle;
+    width: 230px;
+    height: 230px;
+    float: left;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#content #about .aboutRight .content1 .first{
+    margin: 0px 0px 0px 280px;
+    padding: 0px;
+    color: rgb(51, 51, 51);
+    font-family: tahoma, arial, 宋体, 宋体, sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    background-color: rgb(252, 252, 252);
+}
+#content #about .aboutRight .content2 img{
+    border: 0px solid;
+    vertical-align: middle;
+    display: block;
+    margin-left: 50px;
+    margin-right: 0px;
+    margin-top:15px;
+}
+#content #about .aboutRight .content2 .first{
+    margin: 20px 0px 20px 280px;
+    padding: 0px;
+    color: rgb(51, 51, 51);
+    font-family: tahoma, arial, 宋体, 宋体, sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    background-color: rgb(252, 252, 252);
+    font-weight:700;
+}
+
+/* CSA农场 */
+#content #about .aboutRight .csaContent{
+    background-color: rgb(252, 252, 252);
+    margin-left:50px;
+}
+#content #about .aboutRight .csaTit{
+     color: rgb(128, 0, 0);
+    font-family: tahoma, arial, 宋体, 宋体, sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    background-color: rgb(252, 252, 252);
+
+}
+#content #about .aboutRight .zhengwen{
+    color: rgb(51, 51, 51);
+    font-family: tahoma, arial, 宋体, 宋体, sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    background-color: rgb(252, 252, 252);
+    text-indent: 2rem;
+}
+
+/* 农场风光 */
+#imgs .imgList li{
+    list-style:none;
+    float:left;
+    float: left;
+    width: 235px;
+    border: 1px #d9d9d9 solid;
+    text-align: center;
+    margin: 20px 25px 20px 0px;
+    box-shadow: 2px 2px 2px #e8e8e8;
+}
+#imgs .imgList li img.imgListimg{
+    float:none!important;
+    height: 150px!important;
+}
+#imgs .imgList li .imgTIt{
+    background: #eee;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    text-decoration:none;
+    color:#333;
+    transition:all 1s linear;
+}
+#imgs .imgList li .imgTIt:hover{
+    color: #588c0e;
+}
+/* 联系我们 */
+
+#content #about .aboutRight .zhengwen{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em
+}
+#content #about .aboutRight .zhengwen:last-child(){
+    border-bottom:1px solid #eee;
+}
+#content #about .aboutRight #map{
+
+}
+#content #about .aboutRight #myMap{
+    padding-top:50px;
+    height: 500px;
+}
+/* news */
+.content1 .news{
+    margin-left:50px;
+    padding:0;
+    position: relative;
+    line-height: 1;
+    overflow: hidden;
+    min-height: 76px;
+
+
+}
+.content1 .news li{
+    list-style:none;
+    position:relative;
+    display: block;
+    min-height:76px;
+    border-bottom:1px solid #eee;
+
+}
+
+.content1 .news .time{
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    top: 5px;
+    left: 0px;
+    width: 63px;
+    height: 60px;
+    border-radius: 5px;
+    background: #f2f2f2;
+    box-shadow: 0px 2px 3px #d9dbdb;
+    color: #888;
+    border: 1px solid #eaeaea;
+    cursor: text;
+    top:inherit;
+}
+.content1 .news .time em{
+    display: block;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #e8e8e8;
+    font-style: normal;
+    padding: 3px 0px;
+}
+.content1 .news .newsTit{
+    font-size: 16px;
+    margin:10px 0 0 93px;
+}
+.content1 .news .newsTit a{
+    color: #333333;
+    text-decoration: none;
+}
+.content1 .news .newsTit a:hover{
+    color: #588c0e;
+    text-decoration: none;
+}
+.content1 .news .newsCont{
+    margin:15px 0  0 93px;
+}
+.content1 .news .newsCont a{
+    color:#888;
+    text-decoration:none;
+}
+/* news */
+#news .content1 .l50{
+    margin-left:50px;
+
+}
+#news .content1 .l50 .newsContent{
+    text-indent:2em;
+}
+
+#news .content1 .l50 .newsImg .imgs img{
+    width:auto!important;
+    height:auto!important;
+    max-width: 800px!important;
+    margin-top:20px;
+}
