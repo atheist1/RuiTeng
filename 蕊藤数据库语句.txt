@@ -1,0 +1,85 @@
+--管理员用户表 adminuser
+create table adminuser(
+     userid Number Primary Key,
+     username Varchar2(50) UNIQUE,
+     password Varchar2(11)  Not Null,
+     usertype Number(1)   Not Null,
+     RegisterTime Varchar2(50)  Not Null,
+     LastLogin Varchar2(50)  Null
+);
+create sequence seq_adminuser start with 1 increment by 1 nomaxvalue; 
+
+--新闻类别表  newstype
+create table newstype(
+     typeid  Number  Primary Key,
+     newstype  Varchar2(50)  Not Null
+);
+create sequence seq_newstype start with 1 increment by 1 nomaxvalue;
+
+--新闻相册表 newsalbum
+ 
+create table newsalbum(
+    albumid   Number  Primary Key,
+    albumname  Varchar2(50)  Null,
+    albumdesc  Varchar2(1000) Null,
+    albumtime  Varchar2(50)  Not Null,
+    userid    Number  REFERENCES adminuser(userid)
+);
+create sequence seq_newsalbum start with 1 increment by 1 nomaxvalue;
+
+--新闻图片表 newspicture
+create table newspicture(
+    albumid  Number  Not null,
+    pictureid  Number  Primary Key,
+    picturedesc  Varchar2(1000)  Null,
+    picturename  Varchar2(200)  Not null
+);
+create sequence seq_newspicture start with 1 increment by 1 nomaxvalue;
+
+--新闻表  news
+create table news(
+    newsid   Number  Primary Key ,
+    newstitle   Varchar2(50)   Not null,
+    newstype    Number   REFERENCES newstype(typeid),
+    newstime    Varchar2(50) Not null,
+    charge    Number  REFERENCES  adminuser(userid),
+    clicknumber   Number   default 0 Not null,
+    albumid     Number  REFERENCES  newsalbum(albumid),
+    newstext    Long   Not null
+);
+create sequence seq_news start with 1 increment by 1 nomaxvalue;
+
+--相册类别表 albumtype
+create table albumtype(
+    albumtypeid  Number  Primary Key,
+    albumtype  Varchar2(100)  Not null
+);
+create sequence seq_albumtype start with 1 increment by 1 nomaxvalue;
+
+--相册表  album
+create table album(
+   albumid   Number Primary Key,
+   albumtypeid   Number  REFERENCES albumtype(albumtypeid),
+   albumname   Varchar2(50)  null,
+   albumdesc   varchar2(1000)  null,
+   albumtime  varchar2(50)   not null,
+   userid    Number  REFERENCES  adminuser(userid)
+);
+create sequence seq_album start with 1 increment by 1 nomaxvalue;
+
+--图片表  picture
+create table picture(
+    albumid  Number  Not null,
+    pictureid  Number  Primary Key,
+    picturedesc  Varchar2(1000)  Null,
+    picturename  Varchar2(200)  Not null
+);
+create sequence seq_picture start with 1 increment by 1 nomaxvalue;
+
+--轮播图片 ppt
+create table ppt(
+   pptid Number  Primary Key ,
+   address Varchar2(200)  Not null,
+   pptorder   Number  Null
+);
+create sequence seq_ppt start with 1 increment by 1 nomaxvalue;
