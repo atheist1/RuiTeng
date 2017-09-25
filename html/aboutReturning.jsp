@@ -56,7 +56,7 @@
             </div>
         </div>
         <div id="about" class="container clearfix">
-            <div class = 'col-md-3 fl aboutLeft'>
+            <div class = 'col-md-3 col-sm-2 fl aboutLeft'>
                 <div id="title">
                     关于我们
                 </div>
@@ -72,7 +72,7 @@
                     <dd><a href="contact.jsp">联系我们</a></dd>
                 </dl>
             </div>
-            <div class = 'col-md-9 fr aboutRight'>
+            <div class = 'col-md-9 col-sm-10 fr aboutRight'>
                     <div class="content1 clearfix">
                         <h1>走进蕊藤</h1>
                         <img src="../image/mmexport1501831426456.jpg" alt="">

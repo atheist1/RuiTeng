@@ -59,7 +59,7 @@
             </div>
         </div>
         <div id="about" class="container clearfix">
-            <div class = 'col-md-3 fl aboutLeft'>
+            <div class = 'col-md-3 col-sm-2 fl aboutLeft'>
                 <div id="title">
                     关于我们
                 </div>
@@ -75,7 +75,7 @@
                     <dd><a href="contact.jsp">联系我们</a></dd>
                 </dl>
             </div>
-            <div class = 'col-md-9 fr aboutRight' id="news">
+            <div class = 'col-md-9 col-sm-10 fr aboutRight' id="news">
                     <div class="content1 clearfix">
                         <h1 id="title">${news.newstitle}</h1>
                         <table align="center" width="100%">
@@ -86,9 +86,9 @@
                         </table>
                         <div class='l50' style="width: 770px;font-size: 17px;">
                          <br>
-                          
-                          ${news.newstext}  
-                         
+
+                          ${news.newstext}
+
                         </div>
 
                     </div>

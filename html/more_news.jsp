@@ -77,7 +77,7 @@
 		</div>
 	</div>
 	<div id="about" class="container clearfix">
-		<div class='col-md-3 fl aboutLeft'>
+		<div class='col-md-3 col-sm-2 fl aboutLeft'>
 			<div id="title">关于我们</div>
 			<dl>
 				<dt>
@@ -87,7 +87,7 @@
 					<a href="CSAIdea.jsp">CSA理念</a>
 				</dd>
 				<dd>
-					<a href="aboutReturning.jsp" class="on">农场介绍</a>
+					<a href="aboutReturning.jsp" >农场介绍</a>
 				</dd>
 				<dd>
 					<a href="Picture_showPictureAlbum.action?albumid=2">农场风光</a>
@@ -97,7 +97,7 @@
 				</dd>
 				<!-- <dt><a href="#">农场主寄语</a></dt> -->
 				<dt>
-					<a href="index_show_news.action">农场新闻</a>
+					<a href="index_show_news.action" class="on">农场新闻</a>
 				</dt>
 				<dt>
 					<a href="CSAIdea.jsp">关于蕊藤</a>
@@ -107,7 +107,7 @@
 				</dd>
 			</dl>
 		</div>
-		<div class='col-md-9 fr aboutRight' id="news">
+		<div class='col-md-9 col-sm-10 fr aboutRight' id="news">
 
 			<c:forEach items="${news}" var="news">
 				<div

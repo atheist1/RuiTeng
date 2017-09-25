@@ -57,14 +57,14 @@
             </div>
         </div>
         <div id="about" class="container clearfix">
-            <div class = 'col-md-3 fl aboutLeft'>
+            <div class = 'col-md-3 col-sm-2 fl aboutLeft'>
                 <div id="title">
                     关于我们
                 </div>
                 <dl>
                     <dt><a href="CSADesc.jsp">CSA农场</a></dt>
-                    <dd><a href="CSAIdea.jsp">CSA理念</a></dd>
-                    <dd><a href="aboutReturning.jsp" class="on">农场介绍</a></dd>
+                    <dd><a href="CSAIdea.jsp" class="on">CSA理念</a></dd>
+                    <dd><a href="aboutReturning.jsp" >农场介绍</a></dd>
                     <dd><a href="Picture_showPictureAlbum.action?albumid=2">农场风光</a></dd>
                     <dd><a href="Album_showAllAlbum.action">相册展示</a></dd>
                     <!-- <dt><a href="#">农场主寄语</a></dt> -->
@@ -73,7 +73,7 @@
                     <dd><a href="contact.jsp">联系我们</a></dd>
                 </dl>
             </div>
-            <div class = 'col-md-9 fr aboutRight'>
+            <div class = 'col-md-9 col-sm-10 fr aboutRight'>
                     <div class="content1 clearfix">
                         <h1>CSA理念</h1>
                         <div class='csaContent'>

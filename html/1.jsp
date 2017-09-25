@@ -6,7 +6,7 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/"+"photograph";
 %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
   <head>
     <title>相册-${picture[0].albumname }</title>
@@ -38,8 +38,7 @@
                 <li class="li_list"><a href="#">主题活动</a></li>
                 <li class="li_list"><a href="#">觅食之旅</a></li>
                 <li class="li_list"><a href="#">耕读空间</a></li>
-                <li class="li_list"><a href="https://m.realfarm.cn/app/wx/?f=268&h=/app/farms/268/yard#/app/farms/268/yard
-">会员专区</a></li>
+                <li class="li_list"><a href="https://m.realfarm.cn/app/wx/?f=268&h=/app/farms/268/yard#/app/farms/268/yard">会员专区</a></li>
                 <li class="li_list"><a href="contact.jsp">联系我们</a></li>
             </ul>
         </div>
@@ -58,28 +57,28 @@
             </div>
         </div>
         <div id="about" class="container clearfix">
-            <div class = 'col-md-3 fl aboutLeft'>
+            <div class = 'col-md-3 col-sm-2 fl aboutLeft'>
                 <div id="title">
                     关于我们
                 </div>
                 <dl>
                     <dt><a href="CSADesc.jsp">CSA农场</a></dt>
                     <dd><a href="CSAIdea.jsp">CSA理念</a></dd>
-                    <dd><a href="aboutReturning.jsp" class="on">农场介绍</a></dd>
+                    <dd><a href="aboutReturning.jsp" >农场介绍</a></dd>
                     <dd><a href="Picture_showPictureAlbum.action?albumid=2">农场风光</a></dd>
-                    <dd><a href="Album_showAllAlbum.action">相册展示</a></dd>
+                    <dd><a href="Album_showAllAlbum.action" class="on">相册展示</a></dd>
                     <!-- <dt><a href="#">农场主寄语</a></dt> -->
                     <dt><a href="news.jsp">农场新闻</a></dt>
                     <dt><a href="CSAIdea.jsp">关于蕊藤</a></dt>
                     <dd><a href="contact.jsp">联系我们</a></dd>
                 </dl>
             </div>
-             <div class = 'col-md-9 fr aboutRight'>
+             <div class = 'col-md-9 col-sm-10 fr aboutRight'>
                     <div class="content1 clearfix">
                         <h1 id="pName">农场风光</h1>
                         <div id="imgs" class="imgs">
                             <ul class="imgList">
-                            
+
                             <c:forEach items="${pictureAlbumList }" var="pi">
                                 <li>
                                     <img src="${pi.picturename }" alt="" class="imgListimg">

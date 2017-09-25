@@ -58,7 +58,7 @@
             </div>
         </div>
         <div id="about" class="container clearfix">
-            <div class = 'col-md-3 fl aboutLeft'>
+            <div class = 'col-md-3 col-sm-2 fl aboutLeft'>
                 <div id="title">
                     关于我们
                 </div>
@@ -74,7 +74,7 @@
                     <dd><a href="contact.jsp">联系我们</a></dd>
                 </dl>
             </div>
-            <div class = 'col-md-9 fr aboutRight'>
+            <div class = 'col-md-9 col-sm-10 fr aboutRight'>
                     <div class="content1 clearfix">
                         <h1>农场风光</h1>
                         <div id="imgs" class="imgs" >
@@ -83,7 +83,7 @@
                                 <li class="list">
                                     <img src="${pi.picturename }" alt="" class="imgListimg"  data-id="${num.index}">
                                     <input type="hidden" class="desc${num.index}" value="${pi.picturedesc}"/>
-                                  
+
                                 </li>
                             </c:forEach>
                             </ul>
@@ -97,9 +97,9 @@
             		var item = $(".desc"+$(this).attr('data-id'));
             		console.log(item.val())
             	})
-            </script>	
+            </script>
             <script type="text/javascript">
-            	
+
                 (function(){
 
                     layer.use('extend/layer.ext.js', function(){

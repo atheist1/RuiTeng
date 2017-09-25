@@ -6,7 +6,7 @@ main .carousel{
     position: relative;
     width: 100%;
     height: 450px;
-    overflow: hidden;
+
     zoom: 1;
 }
 main .carousel .item img{
@@ -22,6 +22,8 @@ main .glyphicon-chevron-right:before {
 main .glyphicon-chevron-left:before {
     content:none;
 }
+main .carousel{min-width:1200px;}
+main .carousel-inner{min-width:1200px;}
 /* 理念 */
 main .ideas{
    /* height: 70px; */
